@@ -14,8 +14,8 @@ resource "aws_emr_cluster" "tf-test-cluster" {
 
   ec2_attributes {
     subnet_id                         = "${aws_subnet.emr_vpc_subnet_public.id}"
-    emr_managed_master_security_group = "${aws_security_group.allow_all.id}"
-    emr_managed_slave_security_group  = "${aws_security_group.allow_all.id}"
+    emr_managed_master_security_group = "${aws_security_group.EMRSG.id}"
+    emr_managed_slave_security_group  = "${aws_security_group.EMRSG.id}"
     instance_profile                  = "${aws_iam_instance_profile.emr_profile.arn}"
   }
 
