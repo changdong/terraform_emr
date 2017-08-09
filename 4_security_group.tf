@@ -3,7 +3,7 @@
 EMR
 */
 
-resource "aws_security_group" "httpsshSG" {
+resource "aws_security_group" "EMRSG" {
   name        = "EMR_SG"
   description = "EMR_SG"
   vpc_id      = "${aws_vpc.emr_vpc.id}"
